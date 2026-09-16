@@ -1138,11 +1138,61 @@ input:focus,select:focus,textarea:focus{
 }
 
 /* ===== KASFLO / SUGOI 8 BRANDING ===== */
-.splash-logo-mark.sugoi-8-logo { width:112px; height:112px; padding:14px; border-radius:30px; }
-.sugoi-8-logo svg { width:100%; height:100%; display:block; }
-.splash-tagline { display:block; margin-top:7px; font-size:clamp(.9rem,3.4vw,1.15rem); font-weight:500; letter-spacing:.25px; color:rgba(255,255,255,.78); }
-#splashScreen .splash-line.by-line { font-weight:700; letter-spacing:1.1px; text-transform:uppercase; }
-@media (max-width:420px) { .splash-logo-mark.sugoi-8-logo { width:94px; height:94px; border-radius:26px; } }
+#splashScreen {
+    background: radial-gradient(circle at 50% 28%, #ffffff 0%, #f7faf7 52%, #e9f5ed 100%);
+}
+#splashScreen .splash-glow {
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(34, 197, 94, .16) 0%, rgba(34, 197, 94, 0) 70%);
+    filter: blur(30px);
+}
+.splash-logo-mark.sugoi-8-logo {
+    width: min(68vw, 300px);
+    height: auto;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+.splash-logo-mark.sugoi-8-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+}
+#splashScreen .splash-line.app-name { color: #151515; }
+.splash-tagline {
+    display: block;
+    margin-top: 8px;
+    font-size: clamp(.9rem, 3.4vw, 1.15rem);
+    font-weight: 600;
+    letter-spacing: .25px;
+    color: #475569;
+}
+#splashScreen .splash-line.by-line {
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: #168447;
+}
+.app-header .right .app-name.header-brand {
+    padding: 5px 10px;
+    background: #ffffff;
+    border: 1px solid rgba(22, 132, 71, .14);
+}
+.header-brand img {
+    display: block;
+    width: auto;
+    height: 30px;
+    max-width: 112px;
+    object-fit: contain;
+}
+@media (max-width: 420px) {
+    .splash-logo-mark.sugoi-8-logo { width: min(72vw, 260px); }
+    .header-brand img { height: 26px; max-width: 96px; }
+}
 </style>
 </head>
 <body>
@@ -1150,13 +1200,8 @@ input:focus,select:focus,textarea:focus{
 <div id="splashScreen" aria-label="KASFLO - Kas Tertata, Usaha Berdaya">
     <div class="splash-glow"></div>
     <div class="splash-content">
-        <div class="splash-logo-mark sugoi-8-logo" aria-label="Logo Sugoi 8">
-            <svg viewBox="0 0 120 120" role="img" aria-labelledby="sugoi8Title">
-                <title id="sugoi8Title">Sugoi 8</title>
-                <defs><linearGradient id="sugoi8Gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dbeafe"/></linearGradient></defs>
-                <path d="M26 32c8-11 29-12 41-3l-9 13c-7-5-18-5-22 0-5 7 3 10 12 13 14 5 24 12 23 27-1 18-17 29-38 25-10-2-19-7-24-14l10-13c6 7 14 11 22 11 8 0 14-3 15-8 1-6-5-9-15-12-16-5-27-13-27-28 0-4 1-8 3-11h9z" fill="url(#sugoi8Gradient)"/>
-                <path d="M83 33c15 0 26 9 26 22 0 7-4 13-10 17 8 4 13 11 13 20 0 16-13 27-30 27S52 108 52 92c0-9 5-16 13-20-6-4-10-10-10-17 0-13 12-22 28-22zm0 13c-7 0-12 4-12 10s5 10 12 10 12-4 12-10-5-10-12-10zm0 32c-9 0-15 5-15 12s6 12 15 12 15-5 15-12-6-12-15-12z" fill="#ffffff" opacity=".96"/>
-            </svg>
+        <div class="splash-logo-mark sugoi-8-logo">
+            <img src="assets/images/splash/sugoi8-logo.png" alt="Logo Sugoi 8">
         </div>
         <div class="splash-line app-name">KASFLO<span class="splash-tagline">Kas Tertata, Usaha Berdaya</span></div>
         <div class="splash-line by-line">by Sugoi 8</div>
@@ -1196,7 +1241,7 @@ input:focus,select:focus,textarea:focus{
             <div class="user-info" id="headerUserInfo"><i class="fas fa-user-circle"></i> Owner</div>
         </div>
         <div class="right">
-            <span class="app-name"><i class="fas fa-store"></i> KASFLO</span>
+            <span class="app-name header-brand"><img src="assets/images/splash/sugoi8-logo.png" alt="Sugoi 8"></span>
         </div>
     </header>
 
